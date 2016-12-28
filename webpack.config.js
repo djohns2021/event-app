@@ -34,11 +34,18 @@ module.exports = {
         }
       },
       {
-        test: /\.css$/,
-        loader: 'style!css',
+        test: /\.scss$/,
         include: [
           path.join(__dirname, 'app/styles')
         ],
+        loader: 'style!css?modules&importLoaders=1&localIdentName=[path][name]---[local]---[hash:base64:5]!postcss!sass'
+      },
+      {
+        test: /(\.scss|\.css)$/,
+        exclude: [
+          path.join(__dirname, 'app/styles')
+        ],
+        loader: 'style!css!postcss!sass'
       }
     ]
   }

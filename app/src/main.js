@@ -5,8 +5,6 @@ import { Provider } from 'react-redux';
 import createStore from './createStore';
 import Main from 'containers/MainContainer';
 
-import "styles/style.css";
-
 const store = createStore();
 
 export default class MainApp extends Component {

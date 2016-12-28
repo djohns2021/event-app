@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-import 'styles/components/Header.css';
+import styles from 'styles/components/Header.scss';
 
 export default class Header extends Component {
   static displayName = 'Header';
 
   render(props) {
     return (
-      <div id='Header'>
+      <div id='Header' className={styles.header}>
         <h1>Header</h1>
       </div>
     )

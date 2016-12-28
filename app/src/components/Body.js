@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import 'styles/components/Body.css';
+import styles from 'styles/components/Body.scss';
 
 type props = {
   gp1: number,
@@ -16,7 +16,7 @@ export default class Body extends Component {
 
   render(props) {
     return (
-      <div id='Body'>
+      <div id='Body' className={styles.body}>
         <h1>Body</h1>
         <div>{this.props.gp1}</div>
         <div>{this.props.gp2}</div>
